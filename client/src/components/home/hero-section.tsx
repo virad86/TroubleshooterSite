@@ -35,7 +35,9 @@ export default function HeroSection() {
         </div>
       </div>
       
-      <RacingLine />
+      <div className="absolute bottom-0 left-0 right-0">
+        <RacingLine />
+      </div>
     </section>
   );
 }
