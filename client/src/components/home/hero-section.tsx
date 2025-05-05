@@ -31,21 +31,6 @@ export default function HeroSection() {
                 Contact Us
               </button>
             </div>
-            
-            {/* Animated stat card */}
-            <div className="mt-12 inline-block bg-black bg-opacity-50 border border-primary p-4 rounded-sm transform hover:translate-y-[-5px] transition-transform duration-300">
-              <div className="flex items-center">
-                <div className="mr-4">
-                  <div className="w-12 h-12 border-4 border-primary rounded-full flex items-center justify-center">
-                    <span className="text-primary text-2xl font-bold">TS</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="font-titillium font-bold text-2xl text-primary">5,000+ Pit Stops</div>
-                  <p className="text-white text-sm">Successfully resolving IT challenges every day</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
