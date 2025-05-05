@@ -1,7 +1,7 @@
 import { scrollToElement } from "@/lib/utils";
 import RacingLine from "@/components/ui/racing-line";
-// Using the existing hero image
-const heroImagePath = "/images/troubleshooter-hero.jpg";
+// Using the image from the specified object storage bucket
+const heroImagePath = "https://replit-objstore-3a3f0d68-825f-426e-a363-7e10740d0280.us.object-provider.net/Hero_Background.png";
 
 export default function HeroSection() {
   return (
