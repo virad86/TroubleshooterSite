@@ -18,7 +18,7 @@
     --primary: 0 96% 45%;  /* Racing Red */
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 0 0% 7%;  /* Racing Black */
+    --secondary: 220 70% 15%;  /* Dark Navy Blue */
     --secondary-foreground: 0 0% 100%;
     
     --muted: 0 0% 96%;
@@ -38,25 +38,25 @@
   }
  
   .dark {
-    --background: 0 0% 7%;
+    --background: 220 70% 10%;
     --foreground: 0 0% 98%;
     
-    --card: 0 0% 12%;
+    --card: 220 70% 15%;
     --card-foreground: 0 0% 98%;
     
-    --popover: 0 0% 12%;
+    --popover: 220 70% 15%;
     --popover-foreground: 0 0% 98%;
     
     --primary: 0 96% 45%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 0 0% 20%;
+    --secondary: 220 70% 20%;
     --secondary-foreground: 0 0% 98%;
     
-    --muted: 0 0% 20%;
-    --muted-foreground: 0 0% 75%;
+    --muted: 220 60% 25%;
+    --muted-foreground: 0 0% 85%;
     
-    --accent: 0 0% 20%;
+    --accent: 220 50% 30%;
     --accent-foreground: 0 0% 98%;
     
     --destructive: 0 85% 60%;
@@ -95,10 +95,10 @@
   .checkered-flag {
     background-size: 20px 20px;
     background-image: 
-      linear-gradient(45deg, #000 25%, transparent 25%), 
-      linear-gradient(-45deg, #000 25%, transparent 25%), 
-      linear-gradient(45deg, transparent 75%, #000 75%), 
-      linear-gradient(-45deg, transparent 75%, #000 75%);
+      linear-gradient(45deg, #0c2342 25%, transparent 25%), 
+      linear-gradient(-45deg, #0c2342 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #0c2342 75%), 
+      linear-gradient(-45deg, transparent 75%, #0c2342 75%);
   }
   
   .racing-line {
@@ -113,7 +113,7 @@
   }
   
   .btn-racing {
-    @apply bg-primary text-white py-3 px-8 rounded-sm hover:bg-red-700 transition duration-300 font-medium;
+    @apply bg-primary text-white py-3 px-8 rounded-sm hover:bg-secondary transition duration-300 font-medium;
   }
   
   .btn-racing-outline {
