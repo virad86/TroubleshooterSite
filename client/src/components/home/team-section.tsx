@@ -9,7 +9,7 @@ export default function TeamSection() {
       description: "A seasoned application engineer and senior vice president at the Bank of New York, USA, Virad brings wealth of experience from Fortune 500 companies and provides technical leadership at Troubleshooter.",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
       badge: "PRINCIPAL TEAM",
-      position: "RACE ENGINEER"
+      position: "TECHNICAL DIRECTOR"
     },
     {
       name: "Michael Buventura",
@@ -17,7 +17,7 @@ export default function TeamSection() {
       description: "With a two-decade career working for companies like Bank of America and American Express, Michael plays a crucial role in educating customers about enterprise-scale systems and technology trends.",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
       badge: "PRINCIPAL TEAM",
-      position: "RACE ENGINEER"
+      position: "STRATEGIST"
     },
     {
       name: "Ryan Fernando",
