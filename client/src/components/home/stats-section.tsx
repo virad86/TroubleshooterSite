@@ -47,7 +47,7 @@ export default function StatsSection() {
               key={index} 
               className="bg-white p-6 rounded-lg shadow-md transform hover:-translate-y-2 transition duration-300"
             >
-              <div className="p-2 mb-4 bg-gray-900 rounded-sm shadow-inner">
+              <div className="p-2 mb-4 border-b border-gray-200">
                 <TachometerCounter value={stat.value} />
               </div>
               <p className="font-titillium font-semibold text-xl text-center text-secondary mt-2">{stat.title}</p>

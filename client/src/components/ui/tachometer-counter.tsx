@@ -81,40 +81,23 @@ export default function TachometerCounter({
   return (
     <div ref={counterRef} className={cn("relative", className)}>
       {/* Tachometer base */}
-      <div className="flex items-center justify-center py-1">
-        <div className="tachometer-display rounded-sm px-2 py-1 min-w-[120px]">
+      <div className="flex items-center justify-center">
+        <div className="relative">
           {/* Digital display effect */}
-          <div className="font-mono relative z-10 flex items-center justify-center">
-            <span className="font-titillium font-bold text-4xl text-primary tabular-nums tachometer-digits">
+          <div className="relative z-10 flex items-center justify-center">
+            <span className="font-titillium font-bold text-4xl text-primary tabular-nums">
               {count.toLocaleString()}{suffix}
             </span>
           </div>
           
-          {/* Redline indicator that grows with the count */}
+          {/* Tachometer light effect */}
           <div 
-            className="tachometer-glow" 
+            className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-red-500 to-red-700 rounded"
             style={{ 
               width: `${Math.min((count / numericValue) * 100, 100)}%`,
-              opacity: count > numericValue * 0.8 ? 1 : 0.6
+              opacity: 0.7
             }}
           ></div>
-          
-          {/* RPM incremental markers */}
-          <div className="absolute top-1 left-1 right-1 flex justify-between">
-            {[...Array(5)].map((_, i) => (
-              <div 
-                key={i} 
-                className="w-[2px] h-1 bg-white opacity-30"
-              ></div>
-            ))}
-          </div>
-          
-          {/* Label indicator */}
-          {count > numericValue * 0.95 && (
-            <div className="absolute top-0 right-0 bg-red-600 px-1 text-[8px] text-white font-bold rounded-bl-sm">
-              MAX
-            </div>
-          )}
         </div>
       </div>
     </div>
