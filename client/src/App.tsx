@@ -6,6 +6,7 @@ import NotFound from "@/pages/not-found";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 import HomePage from "@/pages/home";
+import RacingLinesSamples from "@/pages/racing-lines";
 
 function Router() {
   return (
@@ -13,6 +14,7 @@ function Router() {
       <Navbar />
       <Switch>
         <Route path="/" component={HomePage} />
+        <Route path="/racing-lines" component={RacingLinesSamples} />
         <Route component={NotFound} />
       </Switch>
       <Footer />
