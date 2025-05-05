@@ -4,8 +4,8 @@ import RacingLine from "@/components/ui/racing-line";
 export default function HeroSection() {
   return (
     <section id="hero" className="relative overflow-hidden min-h-[600px] md:min-h-[650px]">
-      {/* Animated background image with pit crew */}
-      <div className="hero-background"></div>
+      {/* TroubleShooter hero image with blue pit crew background */}
+      <div className="hero-background-new"></div>
       <div className="hero-overlay"></div>
       
       <div className="container mx-auto px-4 py-16 md:py-28 relative z-10">

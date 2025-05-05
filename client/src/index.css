@@ -244,6 +244,15 @@
     will-change: background-position;
   }
   
+  /* TroubleShooter Logo with Blue Pit Crew Background */
+  .hero-background-new {
+    @apply absolute inset-0 w-full h-full;
+    background-image: url('https://images.pling.com/img/00/00/62/63/88/1858455/troubleshooter-hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
   .hero-overlay {
     @apply absolute inset-0 w-full h-full;
     background: linear-gradient(90deg, 
