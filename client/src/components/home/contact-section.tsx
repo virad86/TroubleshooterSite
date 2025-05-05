@@ -48,12 +48,14 @@ export default function ContactSection() {
 
   async function onSubmit(values: ContactFormValues) {
     try {
-      const response = await apiRequest<{
+      interface ContactResponse {
         message: string;
         data: any;
         emailSent: boolean;
         autoReplySent: boolean;
-      }>("POST", "/api/contact", values);
+      }
+      
+      const response = await apiRequest<ContactResponse>("POST", "/api/contact", values);
       
       // Check if emails were sent successfully
       if (response.emailSent) {
