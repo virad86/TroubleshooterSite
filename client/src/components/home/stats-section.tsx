@@ -4,21 +4,29 @@ export default function StatsSection() {
   const stats = [
     {
       value: "100+",
+      gaugeValue: 100,
+      maxValue: 120,
       title: "Partners in the Race",
       description: "Trusted by over 100 customers across Sri Lanka, Australia, the United States, Spain, and Austria."
     },
     {
       value: "20+",
+      gaugeValue: 75,
+      maxValue: 100,
       title: "Engineers in Our Pit Crew",
       description: "Our team of skilled support engineers forms the core of our pit crew, fine-tuning your IT engines."
     },
     {
       value: "5,000+",
+      gaugeValue: 95,
+      maxValue: 120,
       title: "Successful Pit Stops",
       description: "Each resolution represents a successful pit stop, ensuring minimal downtime for your IT vehicles."
     },
     {
       value: "30+",
+      gaugeValue: 85,
+      maxValue: 100,
       title: "Tech Allies in the Pit Lane",
       description: "Collaborating with over 30 technology vendors to orchestrate strategic pit stops for your IT."
     }
@@ -47,8 +55,12 @@ export default function StatsSection() {
               key={index} 
               className="bg-white p-6 rounded-lg shadow-md transform hover:-translate-y-2 transition duration-300"
             >
-              <SpeedGauge />
-              <h3 className="font-titillium font-bold text-4xl text-center text-primary mt-4">{stat.value}</h3>
+              <SpeedGauge 
+                value={stat.gaugeValue} 
+                maxValue={stat.maxValue}
+                className="mb-1" 
+              />
+              <h3 className="font-titillium font-bold text-4xl text-center text-primary mt-1">{stat.value}</h3>
               <p className="font-titillium font-semibold text-xl text-center text-secondary mt-2">{stat.title}</p>
               <p className="text-center text-sm mt-3">{stat.description}</p>
             </div>
