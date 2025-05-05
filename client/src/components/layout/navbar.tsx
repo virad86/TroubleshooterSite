@@ -36,12 +36,10 @@ export default function Navbar() {
     <header className={`sticky top-0 z-50 bg-secondary shadow-md transition-all ${isScrolled ? 'py-2' : 'py-3'}`}>
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
-          <Link href="/">
-            <a className="flex items-center">
-              <span className="text-white font-titillium font-bold text-2xl md:text-3xl">
-                TROUBLE<span className="text-primary">SHOOTER</span>
-              </span>
-            </a>
+          <Link href="/" className="flex items-center">
+            <span className="text-white font-titillium font-bold text-2xl md:text-3xl">
+              TROUBLE<span className="text-primary">SHOOTER</span>
+            </span>
           </Link>
           
           {/* Desktop Navigation */}
