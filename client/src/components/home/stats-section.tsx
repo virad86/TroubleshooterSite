@@ -1,4 +1,4 @@
-import SpeedGauge from "@/components/ui/speed-gauge";
+import TachometerCounter from "@/components/ui/tachometer-counter";
 
 export default function StatsSection() {
   const stats = [
@@ -47,8 +47,9 @@ export default function StatsSection() {
               key={index} 
               className="bg-white p-6 rounded-lg shadow-md transform hover:-translate-y-2 transition duration-300"
             >
-              <SpeedGauge />
-              <h3 className="font-titillium font-bold text-4xl text-center text-primary mt-4">{stat.value}</h3>
+              <div className="p-2 mb-4 bg-gray-900 rounded-sm shadow-inner">
+                <TachometerCounter value={stat.value} />
+              </div>
               <p className="font-titillium font-semibold text-xl text-center text-secondary mt-2">{stat.title}</p>
               <p className="text-center text-sm mt-3">{stat.description}</p>
             </div>
@@ -66,7 +67,7 @@ export default function StatsSection() {
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               {trackStats.map((item, index) => (
                 <div key={index} className="bg-gray-800 p-4 rounded text-center">
-                  <h4 className="text-primary font-titillium font-bold text-3xl">{item.value}</h4>
+                  <TachometerCounter value={item.value} className="py-2" duration={1500 + (index * 200)} />
                   <p className="text-white text-sm">{item.label}</p>
                 </div>
               ))}
