@@ -7,7 +7,7 @@ export default function HeroSection() {
       {/* Background with top-view pit crew image overlay */}
       <div className="absolute inset-0 bg-black/70">
         <img 
-          src="https://images.unsplash.com/photo-1566052972594-f24e712e0f48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80" 
+          src="https://images.pexels.com/photos/12801/pexels-photo-12801.jpeg" 
           alt="Top view of F1 pit crew in action"
           className="w-full h-full object-cover opacity-40 mix-blend-overlay"
         />
@@ -44,9 +44,9 @@ export default function HeroSection() {
               {/* Featured box with a closer view of pit stop */}
               <div className="absolute inset-0 bg-primary opacity-10 rounded-lg transform -rotate-3"></div>
               <img 
-                src="https://images.unsplash.com/photo-1584881450804-dcd603eda8c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                src="https://images.pexels.com/photos/12790817/pexels-photo-12790817.jpeg" 
                 alt="Close up of pit crew changing tires during race" 
-                className="relative z-10 rounded-lg shadow-xl transform rotate-3 object-cover"
+                className="relative z-10 rounded-lg shadow-xl transform rotate-3 object-cover h-72"
               />
               <div className="absolute -bottom-4 -right-4 bg-primary text-white px-6 py-3 rounded-sm shadow-lg">
                 <span className="font-titillium font-bold">5,000+</span>
