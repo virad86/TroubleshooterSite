@@ -17,7 +17,7 @@ export default function HeroSection() {
             <h1 className="font-titillium font-bold text-4xl md:text-5xl lg:text-6xl leading-tight drop-shadow-lg">
               Race to victory with <span className="text-primary">Troubleshooter</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl leading-relaxed drop-shadow-md bg-black bg-opacity-20 p-4 rounded-md backdrop-blur-sm">
+            <p className="mt-6 text-lg md:text-xl leading-relaxed drop-shadow-md bg-black bg-opacity-20 p-4 rounded-md backdrop-blur-sm w-full md:w-3/5">
               Just like in Formula 1, having the best car isn't enough; it's the precision and speed of a pit crew that makes the difference. At Troubleshooter, we're your IT pit crew.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
