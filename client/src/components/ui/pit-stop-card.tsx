@@ -37,7 +37,7 @@ export default function PitStopCard({ service, className }: PitStopCardProps) {
     <div className={cn("pit-stop-card bg-white rounded-lg shadow-xl overflow-hidden transform hover:-translate-y-1 transition duration-300", className)}>
       <div className="flex flex-col md:flex-row">
         <div className={`md:w-1/3 bg-${color} p-6 flex items-center justify-center relative`}>
-          <span className="absolute top-3 left-3 bg-white text-primary font-titillium font-bold text-2xl rounded-full w-8 h-8 flex items-center justify-center">#{id}</span>
+
           <h3 className="font-titillium font-bold text-2xl text-white text-center">{title}</h3>
         </div>
         <div className="md:w-2/3 p-6">
