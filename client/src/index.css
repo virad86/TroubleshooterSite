@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Titillium+Web:wght@400;600;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    
+    --primary: 0 96% 45%;  /* Racing Red */
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 7%;  /* Racing Black */
+    --secondary-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 20%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 89%;
+    --input: 0 0% 89%;
+    --ring: 0 96% 45%;
+    
+    --radius: 0.25rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 98%;
+    
+    --card: 0 0% 12%;
+    --card-foreground: 0 0% 98%;
+    
+    --popover: 0 0% 12%;
+    --popover-foreground: 0 0% 98%;
+    
+    --primary: 0 96% 45%;
+    --primary-foreground: 0 0% 100%;
+    
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 98%;
+    
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 75%;
+    
+    --accent: 0 0% 20%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 0 96% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-inter bg-background text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-titillium font-bold;
+  }
+}
+
+@layer components {
+  .racing-stripe {
+    @apply relative overflow-hidden;
+  }
+  
+  .racing-stripe::before {
+    content: '';
+    @apply absolute top-0 left-[-100%] w-1/2 h-full bg-red-600/20 transform skew-x-25 z-0;
+  }
+  
+  .checkered-flag {
+    background-size: 20px 20px;
+    background-image: 
+      linear-gradient(45deg, #000 25%, transparent 25%), 
+      linear-gradient(-45deg, #000 25%, transparent 25%), 
+      linear-gradient(45deg, transparent 75%, #000 75%), 
+      linear-gradient(-45deg, transparent 75%, #000 75%);
+  }
+  
+  .racing-line {
+    @apply h-2;
+    background: repeating-linear-gradient(
+      90deg,
+      hsl(var(--primary)),
+      hsl(var(--primary)) 20px,
+      #FFF 20px,
+      #FFF 40px
+    );
+  }
+  
+  .btn-racing {
+    @apply bg-primary text-white py-3 px-8 rounded-sm hover:bg-red-700 transition duration-300 font-medium;
+  }
+  
+  .btn-racing-outline {
+    @apply border-2 border-white text-white py-3 px-8 rounded-sm hover:bg-white hover:text-secondary transition duration-300 font-medium;
+  }
+}

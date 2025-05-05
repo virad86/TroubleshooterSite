@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <path d="M5 40H59V42C59 45.3137 56.3137 48 53 48H11C7.68629 48 5 45.3137 5 42V40Z" fill="#333333" stroke="#000000" stroke-width="2"/>
+  <path d="M12 40V30C12 26.6863 14.6863 24 18 24H46C49.3137 24 52 26.6863 52 30V40" stroke="#000000" stroke-width="2"/>
+  <path d="M18 40H24V42C24 43.1046 23.1046 44 22 44H20C18.8954 44 18 43.1046 18 42V40Z" fill="#000000"/>
+  <path d="M40 40H46V42C46 43.1046 45.1046 44 44 44H42C40.8954 44 40 43.1046 40 42V40Z" fill="#000000"/>
+  <rect x="18" y="32" width="28" height="8" rx="2" fill="#E10600"/>
+  <circle cx="14" cy="44" r="5" fill="#333333" stroke="#000000" stroke-width="2"/>
+  <circle cx="50" cy="44" r="5" fill="#333333" stroke="#000000" stroke-width="2"/>
+  <circle cx="14" cy="44" r="2" fill="#FFFFFF"/>
+  <circle cx="50" cy="44" r="2" fill="#FFFFFF"/>
+  <path d="M18 24L20 16H44L46 24" stroke="#000000" stroke-width="2"/>
+  <path d="M26 16V24" stroke="#000000" stroke-width="2"/>
+  <path d="M38 16V24" stroke="#000000" stroke-width="2"/>
+  <rect x="5" y="38" width="54" height="2" fill="#E10600"/>
+</svg>
