@@ -30,7 +30,7 @@ export async function sendContactEmail(data: EmailData): Promise<boolean> {
     
     await mailService.send({
       to: 'virad86@gmail.com', // Change this to your email address
-      from: 'no-reply@troubleshooter.lk', // Change this to your verified sender
+      from: 'virad86@gmail.com', // Using the same verified sender email
       subject: `New Contact Form Submission: ${subject}`,
       text: `
 Name: ${name}
@@ -80,7 +80,7 @@ export async function sendAutoReplyEmail(data: EmailData): Promise<boolean> {
     
     await mailService.send({
       to: email,
-      from: 'no-reply@troubleshooter.lk', // Change this to your verified sender
+      from: 'virad86@gmail.com', // Using the same verified sender email
       subject: 'Thank you for contacting Troubleshooter',
       text: `
 Hello ${name},
