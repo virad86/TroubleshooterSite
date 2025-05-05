@@ -2,6 +2,7 @@ import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { storage } from "./storage";
+import { sendContactEmail, sendAutoReplyEmail } from "./email";
 
 // Contact form validation schema
 const contactFormSchema = z.object({
@@ -24,10 +25,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Store contact form submission
       const newContact = await storage.createContactSubmission(validatedData);
       
+      // Send email notification
+      const emailSent = await sendContactEmail(validatedData);
+      
+      // Send auto-reply email
+      const autoReplySent = await sendAutoReplyEmail(validatedData);
+      
       // Return success response
       return res.status(201).json({
         message: "Contact form submitted successfully",
-        data: newContact
+        data: newContact,
+        emailSent,
+        autoReplySent
       });
     } catch (error) {
       if (error instanceof z.ZodError) {

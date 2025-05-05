@@ -48,13 +48,29 @@ export default function ContactSection() {
 
   async function onSubmit(values: ContactFormValues) {
     try {
-      await apiRequest("POST", "/api/contact", values);
-      toast({
-        title: "Message Sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
+      const response = await apiRequest<{
+        message: string;
+        data: any;
+        emailSent: boolean;
+        autoReplySent: boolean;
+      }>("POST", "/api/contact", values);
+      
+      // Check if emails were sent successfully
+      if (response.emailSent) {
+        toast({
+          title: "Message Sent!",
+          description: "Thanks! We've received your message and sent a copy to your email.",
+        });
+      } else {
+        toast({
+          title: "Message Received",
+          description: "We've stored your message but email notification couldn't be sent. We'll still process your request.",
+        });
+      }
+      
       form.reset();
     } catch (error) {
+      console.error("Contact form error:", error);
       toast({
         title: "Error",
         description: "There was a problem sending your message. Please try again.",
