@@ -1,7 +1,5 @@
 import { scrollToElement } from "@/lib/utils";
 import RacingLine from "@/components/ui/racing-line";
-// Using a smaller size image
-import heroBackgroundImg from "../../assets/images/troubleshooter-hero.jpg";
 
 export default function HeroSection() {
   return (
@@ -9,7 +7,7 @@ export default function HeroSection() {
       {/* TroubleShooter hero image with blue pit crew background */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: `url(${heroBackgroundImg})` }}
+        style={{ backgroundImage: "url('/images/ts-background.jpg')" }}
       ></div>
       
       <div className="container mx-auto px-4 py-16 md:py-28 relative z-10">
