@@ -1,13 +1,14 @@
 import { scrollToElement } from "@/lib/utils";
 import RacingLine from "@/components/ui/racing-line";
+import backgroundImage from "../../assets/background.jpg";
 
 export default function HeroSection() {
   return (
     <section id="hero" className="relative overflow-hidden min-h-[600px] md:min-h-[650px]">
       {/* TroubleShooter hero image with blue pit crew background */}
       <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: "url('/images/ts-background.jpg')" }}
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-blue-900" 
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       ></div>
       
       <div className="container mx-auto px-4 py-16 md:py-28 relative z-10">
