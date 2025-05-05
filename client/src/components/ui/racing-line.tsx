@@ -6,6 +6,6 @@ interface RacingLineProps {
 
 export default function RacingLine({ className }: RacingLineProps) {
   return (
-    <div className={cn("racing-line w-full", className)}></div>
+    <div className={cn("racing-line-dash w-full", className)}></div>
   );
 }
