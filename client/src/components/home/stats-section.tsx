@@ -67,7 +67,7 @@ export default function StatsSection() {
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               {trackStats.map((item, index) => (
                 <div key={index} className="bg-gray-800 p-4 rounded text-center">
-                  <TachometerCounter value={item.value} className="py-2" duration={1500 + (index * 200)} />
+                  <h4 className="text-primary font-titillium font-bold text-3xl">{item.value}</h4>
                   <p className="text-white text-sm">{item.label}</p>
                 </div>
               ))}
