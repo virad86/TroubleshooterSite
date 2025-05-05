@@ -1,6 +1,7 @@
 import { scrollToElement } from "@/lib/utils";
 import RacingLine from "@/components/ui/racing-line";
-import heroImage from "../../assets/images/troubleshooter-hero.jpg";
+// Using the existing hero image
+const heroImagePath = "/images/troubleshooter-hero.jpg";
 
 export default function HeroSection() {
   return (
@@ -8,7 +9,7 @@ export default function HeroSection() {
       {/* TroubleShooter hero image with blue pit crew background */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${heroImagePath})` }}
       ></div>
       <div className="hero-overlay"></div>
       
