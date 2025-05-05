@@ -4,6 +4,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hero section background fallback */
+#hero {
+  background-color: hsl(220, 70%, 15%); /* Dark navy blue as a fallback */
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
