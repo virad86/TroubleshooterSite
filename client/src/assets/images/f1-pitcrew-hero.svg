@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+  <!-- Dark blue background -->
+  <rect width="1200" height="600" fill="#091c3f"/>
+  
+  <!-- Pit crew scene (abstract representation) -->
+  <g opacity="0.8">
+    <!-- F1 Car (simplified) -->
+    <rect x="400" y="350" width="300" height="50" rx="20" fill="#ff3333" />
+    <rect x="450" y="320" width="200" height="30" rx="10" fill="#ff3333" />
+    <circle cx="450" cy="400" r="30" fill="#333333" stroke="#999999" stroke-width="5" />
+    <circle cx="650" cy="400" r="30" fill="#333333" stroke="#999999" stroke-width="5" />
+    <circle cx="500" cy="400" r="10" fill="#333333" />
+    <circle cx="600" cy="400" r="10" fill="#333333" />
+    
+    <!-- Pit Crew members (silhouettes) -->
+    <!-- Person 1 -->
+    <g transform="translate(300, 370)">
+      <circle cx="0" cy="-30" r="15" fill="#333333" />
+      <rect x="-10" y="-15" width="20" height="40" fill="#333333" />
+      <rect x="-15" y="25" width="10" height="20" fill="#333333" />
+      <rect x="5" y="25" width="10" height="20" fill="#333333" />
+      <rect x="-20" y="-5" width="8" height="25" fill="#333333" />
+      <rect x="12" y="-5" width="8" height="25" fill="#333333" />
+    </g>
+    
+    <!-- Person 2 -->
+    <g transform="translate(350, 350)">
+      <circle cx="0" cy="-30" r="15" fill="#333333" />
+      <rect x="-10" y="-15" width="20" height="40" fill="#333333" />
+      <rect x="-15" y="25" width="10" height="20" fill="#333333" />
+      <rect x="5" y="25" width="10" height="20" fill="#333333" />
+      <rect x="-20" y="-15" width="8" height="25" fill="#333333" />
+      <rect x="12" y="-15" width="8" height="25" fill="#333333" />
+    </g>
+    
+    <!-- Person 3 -->
+    <g transform="translate(700, 370)">
+      <circle cx="0" cy="-30" r="15" fill="#333333" />
+      <rect x="-10" y="-15" width="20" height="40" fill="#333333" />
+      <rect x="-15" y="25" width="10" height="20" fill="#333333" />
+      <rect x="5" y="25" width="10" height="20" fill="#333333" />
+      <rect x="-20" y="-5" width="8" height="25" fill="#333333" />
+      <rect x="12" y="-5" width="8" height="25" fill="#333333" />
+    </g>
+    
+    <!-- Person 4 -->
+    <g transform="translate(750, 350)">
+      <circle cx="0" cy="-30" r="15" fill="#333333" />
+      <rect x="-10" y="-15" width="20" height="40" fill="#333333" />
+      <rect x="-15" y="25" width="10" height="20" fill="#333333" />
+      <rect x="5" y="25" width="10" height="20" fill="#333333" />
+      <rect x="-25" y="-15" width="8" height="25" fill="#333333" />
+      <rect x="17" y="-15" width="8" height="25" fill="#333333" />
+    </g>
+    
+    <!-- Person 5 (kneeling) -->
+    <g transform="translate(500, 350)">
+      <circle cx="0" cy="-15" r="15" fill="#333333" />
+      <rect x="-10" y="0" width="20" height="30" fill="#333333" />
+      <rect x="-20" y="30" width="40" height="10" fill="#333333" />
+      <rect x="-15" y="40" width="10" height="15" fill="#333333" />
+      <rect x="5" y="40" width="10" height="15" fill="#333333" />
+    </g>
+    
+    <!-- Tire and tools -->
+    <circle cx="300" cy="430" r="25" fill="#333333" stroke="#999999" stroke-width="3" />
+    <rect x="770" y="430" width="40" height="10" fill="#cccccc" />
+    <rect x="250" y="420" width="30" height="5" fill="#cccccc" />
+  </g>
+  
+  <!-- Overlay to enhance text readability -->
+  <rect width="1200" height="600" fill="url(#overlay)" />
+  <defs>
+    <linearGradient id="overlay" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#091c3f;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#091c3f;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Racing lines and accents -->
+  <rect x="0" y="480" width="1200" height="10" fill="#ff3333" opacity="0.7" />
+  <rect x="0" y="150" width="1200" height="5" fill="#ff3333" opacity="0.5" />
+  
+  <!-- Checkered pattern (subtle) -->
+  <g transform="translate(0, 490)" opacity="0.3">
+    <rect x="0" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="20" y="0" width="20" height="20" fill="#000000" />
+    <rect x="40" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="60" y="0" width="20" height="20" fill="#000000" />
+    <rect x="80" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="0" y="20" width="20" height="20" fill="#000000" />
+    <rect x="20" y="20" width="20" height="20" fill="#ffffff" />
+    <rect x="40" y="20" width="20" height="20" fill="#000000" />
+    <rect x="60" y="20" width="20" height="20" fill="#ffffff" />
+    <rect x="80" y="20" width="20" height="20" fill="#000000" />
+    <!-- Repeat pattern -->
+    <rect x="100" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="120" y="0" width="20" height="20" fill="#000000" />
+    <rect x="140" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="160" y="0" width="20" height="20" fill="#000000" />
+    <rect x="180" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="100" y="20" width="20" height="20" fill="#000000" />
+    <rect x="120" y="20" width="20" height="20" fill="#ffffff" />
+    <rect x="140" y="20" width="20" height="20" fill="#000000" />
+    <rect x="160" y="20" width="20" height="20" fill="#ffffff" />
+    <rect x="180" y="20" width="20" height="20" fill="#000000" />
+    <!-- Continue pattern -->
+    <rect x="200" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="220" y="0" width="20" height="20" fill="#000000" />
+    <rect x="240" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="260" y="0" width="20" height="20" fill="#000000" />
+    <rect x="280" y="0" width="20" height="20" fill="#ffffff" />
+    <rect x="200" y="20" width="20" height="20" fill="#000000" />
+    <rect x="220" y="20" width="20" height="20" fill="#ffffff" />
+    <rect x="240" y="20" width="20" height="20" fill="#000000" />
+    <rect x="260" y="20" width="20" height="20" fill="#ffffff" />
+    <rect x="280" y="20" width="20" height="20" fill="#000000" />
+  </g>
+  
+  <!-- TroubleShooter Logo Overlay -->
+  <g opacity="0.9" transform="translate(600, 250) scale(0.6)">
+    <!-- Question Mark Symbol -->
+    <path d="M -100,0 C -120,0 -140,-20 -140,-40 C -140,-60 -120,-80 -100,-80 C -80,-80 -60,-60 -60,-40 C -60,-20 -70,-10 -80,0 L -80,30" stroke="#ffffff" stroke-width="15" stroke-linecap="round"/>
+    <circle cx="-80" cy="50" r="8" fill="#ffffff"/>
+    
+    <!-- Trouble Text -->
+    <path d="M -30,-70 L -30,-100 L 80,-100 L 80,-70 L 40,-70 L 40,0 L 10,0 L 10,-70 Z" fill="#ff3333"/>
+    <path d="M 90,-100 L 120,-100 L 120,-50 C 120,-40, 130,-30, 140,-30 C 150,-30, 160,-40, 160,-50 L 160,-100 L 190,-100 L 190,-50 C 190,-20, 170,0, 140,0 C 110,0, 90,-20, 90,-50 Z" fill="#ff3333"/>
+    <path d="M 200,-100 L 260,-100 C 280,-100, 300,-80, 300,-60 C 300,-40, 280,-20, 260,-20 L 230,-20 L 230,0 L 200,0 Z M 230,-70 L 230,-50 L 260,-50 C 265,-50, 270,-55, 270,-60 C 270,-65, 265,-70, 260,-70 Z" fill="#ff3333"/>
+    <path d="M 310,-100 L 340,-100 L 340,-30 L 390,-30 L 390,0 L 310,0 Z" fill="#ff3333"/>
+    <path d="M 400,-100 L 430,-100 L 430,0 L 400,0 Z" fill="#ff3333"/>
+    <path d="M 440,0 L 440,-100 L 470,-100 L 500,-40 L 500,-100 L 530,-100 L 530,0 L 500,0 L 470,-60 L 470,0 Z" fill="#ff3333"/>
+    
+    <!-- Shooter Text -->
+    <path d="M -30,60 C -50,60, -60,40, -60,30 C -60,20, -50,0, -30,0 C -10,0, 0,20, 0,30 L -30,30 C -35,30, -35,35, -30,35 C -25,35, -20,40, -20,45 C -20,50, -25,55, -30,55 C -35,55, -40,50, -40,45 L -60,45 C -60,55, -50,75, -30,75 C -10,75, 0,55, 0,45 C 0,35, -5,30, -15,25 C -5,20, 0,15, 0,5 C 0,-5, -10,-15, -30,-15 C -50,-15, -60,-5, -60,5 L -40,5 C -40,0, -35,-5, -30,-5 C -25,-5, -20,0, -20,5 C -20,10, -25,15, -30,15 C -35,15, -40,10, -50,10 Z" fill="#ffffff"/>
+    <path d="M 10,-10 L 40,-10 L 40,30 L 80,30 L 80,60 L 10,60 Z" fill="#ffffff"/>
+    <path d="M 90,-10 L 150,-10 C 170,-10, 190,10, 190,30 C 190,50, 170,70, 150,70 L 90,70 Z M 120,20 L 120,40 L 145,40 C 150,40, 155,35, 155,30 C 155,25, 150,20, 145,20 Z" fill="#ffffff"/>
+    <path d="M 200,-10 L 250,-10 C 270,-10, 290,10, 290,30 C 290,50, 270,70, 250,70 L 200,70 Z M 230,20 L 230,40 L 245,40 C 250,40, 255,35, 255,30 C 255,25, 250,20, 245,20 Z" fill="#ffffff"/>
+    <path d="M 300,-10 L 330,-10 L 330,40 L 380,40 L 380,70 L 300,70 Z" fill="#ffffff"/>
+    <path d="M 390,-10 L 460,-10 L 460,20 L 420,20 L 420,30 L 460,30 L 460,60 L 390,60 L 390,50 L 430,50 L 430,40 L 390,40 Z" fill="#ffffff"/>
+    <path d="M 470,-10 L 520,-10 L 520,20 L 500,20 L 500,60 L 470,60 L 470,20 L 450,20 L 450,60 L 420,60 L 420,20 L 400,20 L 400,-10 Z" fill="#ffffff"/>
+  </g>
+</svg>
