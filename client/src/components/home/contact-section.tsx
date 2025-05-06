@@ -132,7 +132,7 @@ export default function ContactSection() {
                         <Input 
                           placeholder="Your Name" 
                           {...field} 
-                          className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-primary" 
+                          className="w-full px-4 py-3 border border-gray-300 rounded-sm" 
                         />
                       </FormControl>
                       <FormMessage />
@@ -151,7 +151,7 @@ export default function ContactSection() {
                           placeholder="your@email.com" 
                           type="email"
                           {...field} 
-                          className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-primary" 
+                          className="w-full px-4 py-3 border border-gray-300 rounded-sm" 
                         />
                       </FormControl>
                       <FormMessage />
