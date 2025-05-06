@@ -9,7 +9,7 @@ export default function TeamSection() {
       description: "A seasoned application engineer and senior vice president at the Bank of New York, USA, Virad brings wealth of experience from Fortune 500 companies and provides technical leadership at Troubleshooter.",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
       badge: "PRINCIPAL TEAM",
-      position: "TECHNICAL DIRECTOR"
+      position: "RACE DIRECTOR"
     },
     {
       name: "Michael Buventura",
