@@ -169,7 +169,7 @@ export default function ContactSection() {
                         <Input 
                           placeholder="How can we help you?" 
                           {...field} 
-                          className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-primary" 
+                          className="w-full px-4 py-3 border border-gray-300 rounded-sm" 
                         />
                       </FormControl>
                       <FormMessage />
@@ -188,7 +188,7 @@ export default function ContactSection() {
                           placeholder="Tell us more about your IT needs..." 
                           rows={5}
                           {...field} 
-                          className="w-full px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:border-primary" 
+                          className="w-full px-4 py-3 border border-gray-300 rounded-sm" 
                         />
                       </FormControl>
                       <FormMessage />
