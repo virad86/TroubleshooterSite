@@ -57,18 +57,11 @@ export default function ContactSection() {
       
       const response = await apiRequest<ContactResponse>("POST", "/api/contact", values);
       
-      // Check if emails were sent successfully
-      if (response.emailSent) {
-        toast({
-          title: "Message Sent!",
-          description: "Thanks! We've received your message and sent a copy to your email.",
-        });
-      } else {
-        toast({
-          title: "Message Received",
-          description: "We've stored your message but email notification couldn't be sent. We'll still process your request.",
-        });
-      }
+      // Always show a success message since the form data was saved
+      toast({
+        title: "Message Sent!",
+        description: "Thanks! We've received your message and will get back to you soon.",
+      });
       
       form.reset();
     } catch (error) {

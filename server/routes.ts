@@ -25,18 +25,21 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Store contact form submission
       const newContact = await storage.createContactSubmission(validatedData);
       
-      // Send email notification
-      const emailSent = await sendContactEmail(validatedData);
-      
-      // Send auto-reply email
-      const autoReplySent = await sendAutoReplyEmail(validatedData);
+      // Try to send emails but don't block the response
+      try {
+        // Send email notification
+        await sendContactEmail(validatedData).catch(err => console.error("Email notification error:", err));
+        
+        // Send auto-reply email
+        await sendAutoReplyEmail(validatedData).catch(err => console.error("Auto-reply error:", err));
+      } catch (emailError) {
+        console.error("Error in email sending process:", emailError);
+      }
       
       // Return success response
       return res.status(201).json({
         message: "Contact form submitted successfully",
-        data: newContact,
-        emailSent,
-        autoReplySent
+        data: newContact
       });
     } catch (error) {
       if (error instanceof z.ZodError) {
