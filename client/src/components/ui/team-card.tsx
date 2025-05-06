@@ -36,7 +36,7 @@ export default function TeamCard({ member, className }: TeamCardProps) {
         </p>
         <div className="mt-4 flex justify-between items-center">
           <span className="bg-primary text-white text-xs py-1 px-3 rounded-sm">{badge}</span>
-          <span className="text-foreground text-sm text-right">{name === "Ryan Fernando" ? "Race Director" : position}</span>
+          <span className="text-foreground text-sm text-right">{name === "Ryan Fernando" ? "RACE DIRECTOR" : position}</span>
         </div>
       </div>
     </div>
