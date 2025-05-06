@@ -56,10 +56,19 @@ export function setCookie(
   if (opts.sameSite) cookieString += `; SameSite=${opts.sameSite}`;
   if (opts.path) cookieString += `; Path=${opts.path}`;
   
-  res.setHeader('Set-Cookie', [
-    ...(res.getHeader('Set-Cookie') || []),
-    cookieString
-  ]);
+  const existingCookies = res.getHeader('Set-Cookie');
+  let cookies: string[] = [];
+
+  if (existingCookies) {
+    if (Array.isArray(existingCookies)) {
+      cookies = [...existingCookies];
+    } else if (typeof existingCookies === 'string') {
+      cookies = [existingCookies];
+    }
+  }
+
+  cookies.push(cookieString);
+  res.setHeader('Set-Cookie', cookies);
 }
 
 /**

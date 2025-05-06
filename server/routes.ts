@@ -1,4 +1,4 @@
-import type { Express } from "express";
+import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
 import { storage } from "./storage";
@@ -52,6 +52,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.error("Error submitting contact form:", error);
       return res.status(500).json({ 
         message: "Internal server error" 
+      });
+    }
+  });
+
+  // Site traffic API endpoints
+  app.get(`${apiPrefix}/traffic`, async (req: Request, res: Response) => {
+    try {
+      // Get query params for pagination
+      const limit = req.query.limit ? parseInt(req.query.limit as string) : 100;
+      const offset = req.query.offset ? parseInt(req.query.offset as string) : 0;
+      
+      // Get traffic data with pagination
+      const trafficData = await storage.getSiteTraffic(limit, offset);
+      
+      return res.status(200).json({
+        message: "Site traffic retrieved successfully",
+        count: trafficData.length,
+        data: trafficData
+      });
+    } catch (error) {
+      console.error("Error retrieving site traffic:", error);
+      return res.status(500).json({
+        message: "Failed to retrieve site traffic data"
+      });
+    }
+  });
+  
+  // Site traffic analytics
+  app.get(`${apiPrefix}/traffic/analytics`, async (req: Request, res: Response) => {
+    try {
+      // Get traffic analytics
+      const analytics = await storage.getSiteTrafficAnalytics();
+      
+      return res.status(200).json({
+        message: "Site traffic analytics retrieved successfully",
+        data: analytics
+      });
+    } catch (error) {
+      console.error("Error retrieving site traffic analytics:", error);
+      return res.status(500).json({
+        message: "Failed to retrieve site traffic analytics"
       });
     }
   });
