@@ -7,7 +7,7 @@ export default function TeamSection() {
       name: "Virad Fernando",
       role: "Co-founder / CTO",
       description: "A seasoned application engineer and senior vice president at the Bank of New York, USA, Virad brings wealth of experience from Fortune 500 companies and provides technical leadership at Troubleshooter.",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+      image: "https://ui-avatars.com/api/?name=Virad+Fernando&background=0D8ABC&color=fff",
       badge: "PRINCIPAL TEAM",
       position: "TECHNICAL DIRECTOR"
     },
@@ -15,7 +15,7 @@ export default function TeamSection() {
       name: "Michael Buventura",
       role: "Co-founder / Chief Technology Advocate",
       description: "With a two-decade career working for companies like Bank of America and American Express, Michael plays a crucial role in educating customers about enterprise-scale systems and technology trends.",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+      image: "https://ui-avatars.com/api/?name=Michael+Buventura&background=1D4ED8&color=fff",
       badge: "PRINCIPAL TEAM",
       position: "STRATEGIST"
     },
@@ -23,7 +23,7 @@ export default function TeamSection() {
       name: "Ryan Fernando",
       role: "Co-founder / CEO",
       description: "With over a decade of experience in the IT industry and a background working with leading technology brands, Ryan provides overall leadership, overseeing customer relationships, marketing, and finance.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80",
+      image: "https://ui-avatars.com/api/?name=Ryan+Fernando&background=991B1B&color=fff",
       badge: "PRINCIPAL TEAM",
       position: "RACE ENGINEER"
     },
@@ -31,7 +31,7 @@ export default function TeamSection() {
       name: "Navinda Yatawara",
       role: "Director - Solutions",
       description: "With over 12 years of experience in IT, Navinda leads solutions and technical support teams at Troubleshooter, providing them with technical supervision and guidance for local and overseas customers.",
-      image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1071&q=80",
+      image: "https://ui-avatars.com/api/?name=Navinda+Yatawara&background=065F46&color=fff",
       badge: "PRINCIPAL TEAM",
       position: "RACE ENGINEER"
     }
