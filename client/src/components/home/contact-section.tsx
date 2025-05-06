@@ -104,7 +104,12 @@ export default function ContactSection() {
     {
       icon: <Globe className="h-6 w-6 text-primary" />,
       title: "Website",
-      content: "www.troubleshooter.lk",
+      content: (
+        <>
+          www.troubleshooter.lk<br />
+          www.troubleshootercorp.com
+        </>
+      ),
     },
   ];
 
