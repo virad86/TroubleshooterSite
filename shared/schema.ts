@@ -36,3 +36,37 @@ export const insertContactSubmissionSchema = createInsertSchema(contactSubmissio
 
 export type InsertContactSubmission = z.infer<typeof insertContactSubmissionSchema>;
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
+
+// Site traffic table to track visitors
+export const siteTraffic = pgTable("site_traffic", {
+  id: serial("id").primaryKey(),
+  timestamp: timestamp("timestamp").defaultNow().notNull(),
+  ipAddress: text("ip_address"),
+  userAgent: text("user_agent"),
+  referrer: text("referrer"),
+  page: text("page").notNull(),
+  region: text("region"),
+  country: text("country"),
+  city: text("city"),
+  browser: text("browser"),
+  os: text("os"),
+  device: text("device"),
+  sessionId: text("session_id"),
+});
+
+export const insertSiteTrafficSchema = createInsertSchema(siteTraffic).pick({
+  ipAddress: true,
+  userAgent: true,
+  referrer: true,
+  page: true,
+  region: true,
+  country: true,
+  city: true,
+  browser: true,
+  os: true,
+  device: true,
+  sessionId: true,
+});
+
+export type InsertSiteTraffic = z.infer<typeof insertSiteTrafficSchema>;
+export type SiteTraffic = typeof siteTraffic.$inferSelect;
