@@ -28,6 +28,18 @@ export async function sendContactEmail(data: EmailData): Promise<boolean> {
   try {
     const { name, email, subject, message } = data;
     
+    // Store contact submission in the database regardless of email status
+    // Message will still be logged even if email fails
+    
+    // For testing, you can uncomment this to see the form data without sending emails
+    console.log("Contact form data received:", { name, email, subject, messageLength: message.length });
+    
+    // Skip actual email sending in development if needed
+    if (process.env.NODE_ENV === 'development' && process.env.SKIP_EMAILS === 'true') {
+      console.log('[DEV MODE] Skipping actual email sending');
+      return true;
+    }
+    
     await mailService.send({
       to: 'virad86@gmail.com', // Change this to your email address
       from: 'virad86@gmail.com', // Using the same verified sender email
@@ -60,8 +72,17 @@ ${message}
     
     console.log(`Contact form email sent successfully to virad86@gmail.com from ${email}`);
     return true;
-  } catch (error) {
-    console.error('Error sending contact form email:', error);
+  } catch (error: any) {
+    // Provide more detailed error information
+    if (error.code === 403) {
+      console.error('SendGrid authorization error: The API key may not have proper permissions or the sender email is not verified.');
+      console.error('Please verify the following:');
+      console.error('1. The API key has "Mail Send" permissions enabled');
+      console.error('2. The sender email (virad86@gmail.com) is verified in the SendGrid account');
+      console.error('3. The SendGrid account is active and in good standing');
+    } else {
+      console.error('Error sending contact form email:', error);
+    }
     return false;
   }
 }
@@ -77,6 +98,12 @@ export async function sendAutoReplyEmail(data: EmailData): Promise<boolean> {
 
   try {
     const { name, email } = data;
+    
+    // Skip actual email sending in development if needed
+    if (process.env.NODE_ENV === 'development' && process.env.SKIP_EMAILS === 'true') {
+      console.log('[DEV MODE] Skipping auto-reply email sending');
+      return true;
+    }
     
     await mailService.send({
       to: email,
@@ -129,8 +156,17 @@ The Troubleshooter Team
     
     console.log(`Auto-reply email sent successfully to ${email}`);
     return true;
-  } catch (error) {
-    console.error('Error sending auto-reply email:', error);
+  } catch (error: any) {
+    // Provide more detailed error information
+    if (error.code === 403) {
+      console.error('SendGrid authorization error: The API key may not have proper permissions or the sender email is not verified.');
+      console.error('Please verify the following:');
+      console.error('1. The API key has "Mail Send" permissions enabled');
+      console.error('2. The sender email (virad86@gmail.com) is verified in the SendGrid account');
+      console.error('3. The SendGrid account is active and in good standing');
+    } else {
+      console.error('Error sending auto-reply email:', error);
+    }
     return false;
   }
 }

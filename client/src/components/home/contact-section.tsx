@@ -57,11 +57,26 @@ export default function ContactSection() {
       
       const response = await apiRequest<ContactResponse>("POST", "/api/contact", values);
       
-      // Always show a success message since the form data was saved
-      toast({
-        title: "Message Sent!",
-        description: "Thanks! We've received your message and will get back to you soon.",
-      });
+      // Different message based on email status
+      if (response.emailSent && response.autoReplySent) {
+        // Both emails sent successfully
+        toast({
+          title: "Message Sent!",
+          description: "Thanks! We've received your message and will get back to you soon.",
+        });
+      } else if (!response.emailSent && !response.autoReplySent) {
+        // Both emails failed but data was saved
+        toast({
+          title: "Message Saved",
+          description: "Your message was saved, but there was an issue with our email system. We'll still receive your inquiry!",
+        });
+      } else {
+        // One of the emails failed
+        toast({
+          title: "Message Received",
+          description: "We've received your message, but there was a minor issue with our notification system. We'll still get back to you soon!",
+        });
+      }
       
       form.reset();
     } catch (error) {
