@@ -6,7 +6,7 @@ export default function ServicesSection() {
     {
       id: 1,
       title: "Managed Service Desk",
-      color: "primary",
+      color: "primary" as const,
       description: "Harness the power of Troubleshooter's complete managed service desk solution. This offering not only streamlines communication but also enhances IT services, supports user mobility, and reduces operational costs.",
       features: [
         {
@@ -26,7 +26,7 @@ export default function ServicesSection() {
     {
       id: 2,
       title: "IT Maintenance Services (AMCs)",
-      color: "secondary",
+      color: "secondary" as const,
       description: "Troubleshooter offers maintenance services covering remote and onsite technical support, warranty renewals, and troubleshooting. Our annual maintenance contracts span various technology areas, ensuring your networking, information security, servers, storage, backup and more are well-maintained.",
       link: {
         text: "Learn more about our AMCs →",
@@ -36,19 +36,19 @@ export default function ServicesSection() {
     {
       id: 3,
       title: "Islandwide Branch Office Maintenance Support",
-      color: "primary",
+      color: "primary" as const,
       description: "Ensure smooth branch office operations with Troubleshooter's regional field engineers. Our support covers PCs/laptops, network devices, printers/scanners, CCTV, and access control devices. Periodic preventive maintenance minimizes breakdowns, while regional engineers expedite issue resolution."
     },
     {
       id: 4,
       title: "Business Appliances",
-      color: "secondary",
+      color: "secondary" as const,
       description: "Troubleshooter provides business technology appliances from leading global vendors. Our technical support goes beyond providing devices; it includes on-site assistance, spare devices during breakdowns, and overall support for purchased devices. From PCs/laptops to POS appliances, we've got you covered."
     },
     {
       id: 5,
       title: "Streamlined System Integration Solutions",
-      color: "primary",
+      color: "primary" as const,
       description: "At Troubleshooter, we seamlessly integrate cutting-edge technologies from the world's leading vendors to elevate your IT experience. Our System Integration Solutions come with 24x7 technical support.",
       categories: [
         {
@@ -93,13 +93,20 @@ export default function ServicesSection() {
           </p>
         </div>
         
-        {services.map((service, index) => (
-          <PitStopCard 
-            key={index}
-            service={service}
-            className={index < services.length - 1 ? "mb-10" : ""}
-          />
-        ))}
+        <div itemScope itemType="https://schema.org/ItemList">
+          <meta itemProp="name" content="Troubleshooter IT Services" />
+          <meta itemProp="description" content="Professional IT services and solutions for businesses" />
+          
+          {services.map((service, index) => (
+            <div key={index} itemScope itemProp="itemListElement" itemType="https://schema.org/ListItem">
+              <meta itemProp="position" content={`${index + 1}`} />
+              <PitStopCard 
+                service={service}
+                className={index < services.length - 1 ? "mb-10" : ""}
+              />
+            </div>
+          ))}
+        </div>
       </div>
       
       {/* Racing decoration */}
