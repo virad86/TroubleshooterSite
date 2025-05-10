@@ -85,6 +85,11 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-titillium font-bold;
   }
+  
+  /* Skip to content link for accessibility */
+  .skip-to-content {
+    @apply bg-primary text-white font-medium py-2 px-4 absolute z-50 rounded-b-md -translate-y-full transition-transform duration-200 focus:translate-y-0 left-4;
+  }
 }
 
 @layer components {

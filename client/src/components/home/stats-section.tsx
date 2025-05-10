@@ -32,7 +32,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section id="about" className="py-16 bg-slate-100">
+    <section id="about" className="py-16 bg-slate-100" lang="en">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="font-titillium font-bold text-3xl md:text-4xl text-secondary">Our Pit Crew Dynamics</h2>
@@ -46,12 +46,15 @@ export default function StatsSection() {
             <div 
               key={index} 
               className="bg-white p-6 rounded-lg shadow-md transform hover:-translate-y-2 transition duration-300"
+              itemScope
+              itemType="https://schema.org/Statistic"
             >
               <div className="p-2 mb-4 border-b border-gray-200">
                 <TachometerCounter value={stat.value} />
+                <meta itemProp="value" content={stat.value} />
               </div>
-              <p className="font-titillium font-semibold text-xl text-center text-secondary mt-2">{stat.title}</p>
-              <p className="text-center text-sm mt-3">{stat.description}</p>
+              <p className="font-titillium font-semibold text-xl text-center text-secondary mt-2" itemProp="name">{stat.title}</p>
+              <p className="text-center text-sm mt-3" itemProp="description">{stat.description}</p>
             </div>
           ))}
         </div>
@@ -66,9 +69,9 @@ export default function StatsSection() {
             </div>
             <div className="md:w-1/2 grid grid-cols-2 gap-4">
               {trackStats.map((item, index) => (
-                <div key={index} className="bg-gray-800 p-4 rounded text-center">
-                  <h4 className="text-primary font-titillium font-bold text-3xl">{item.value}</h4>
-                  <p className="text-white text-sm">{item.label}</p>
+                <div key={index} className="bg-gray-800 p-4 rounded text-center" itemScope itemType="https://schema.org/Statistic">
+                  <h4 className="text-primary font-titillium font-bold text-3xl" itemProp="value">{item.value}</h4>
+                  <p className="text-white text-sm" itemProp="name">{item.label}</p>
                 </div>
               ))}
             </div>

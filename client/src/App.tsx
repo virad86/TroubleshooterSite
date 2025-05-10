@@ -11,11 +11,16 @@ import RacingLinesSamples from "@/pages/racing-lines";
 function Router() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* Skip to content link for accessibility */}
+      <a href="#main-content" className="skip-to-content focus:outline-none">
+        Skip to content
+      </a>
+      
       <header role="banner">
         <Navbar />
       </header>
       
-      <main id="main-content" className="main-content flex-grow" role="main">
+      <main id="main-content" className="main-content flex-grow" role="main" tabIndex={-1}>
         <Switch>
           <Route path="/" component={HomePage} />
           <Route path="/racing-lines" component={RacingLinesSamples} />
