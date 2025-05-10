@@ -8,6 +8,8 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat bg-blue-900" 
         style={{ backgroundImage: 'url(/images/New_Background.jpg)' }}
+        role="img"
+        aria-label="Formula 1 racing themed background with IT professionals as the pit crew"
       ></div>
       
       <div className="container mx-auto px-4 py-16 md:py-28 relative z-10">

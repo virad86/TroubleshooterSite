@@ -11,13 +11,19 @@ import RacingLinesSamples from "@/pages/racing-lines";
 function Router() {
   return (
     <>
-      <Navbar />
-      <Switch>
-        <Route path="/" component={HomePage} />
-        <Route path="/racing-lines" component={RacingLinesSamples} />
-        <Route component={NotFound} />
-      </Switch>
-      <Footer />
+      <header>
+        <Navbar />
+      </header>
+      <main className="main-content">
+        <Switch>
+          <Route path="/" component={HomePage} />
+          <Route path="/racing-lines" component={RacingLinesSamples} />
+          <Route component={NotFound} />
+        </Switch>
+      </main>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
