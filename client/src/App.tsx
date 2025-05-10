@@ -10,21 +10,23 @@ import RacingLinesSamples from "@/pages/racing-lines";
 
 function Router() {
   return (
-    <>
-      <header>
+    <div className="flex flex-col min-h-screen">
+      <header role="banner">
         <Navbar />
       </header>
-      <main className="main-content">
+      
+      <main id="main-content" className="main-content flex-grow" role="main">
         <Switch>
           <Route path="/" component={HomePage} />
           <Route path="/racing-lines" component={RacingLinesSamples} />
           <Route component={NotFound} />
         </Switch>
       </main>
-      <footer>
+      
+      <footer role="contentinfo">
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 
