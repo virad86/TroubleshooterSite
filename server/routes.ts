@@ -1,6 +1,7 @@
 import type { Express, Request, Response } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
+import path from "path";
 import { storage } from "./storage";
 import { sendContactEmail, sendAutoReplyEmail } from "./email";
 
@@ -13,6 +14,14 @@ const contactFormSchema = z.object({
 });
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve favicon specifically to avoid it being caught by Vite middleware
+  app.get('/favicon.ico', (req: Request, res: Response) => {
+    const faviconPath = path.join(process.cwd(), 'public', 'favicon.ico');
+    res.setHeader('Content-Type', 'image/x-icon');
+    res.setHeader('Cache-Control', 'public, max-age=86400'); // Cache for 1 day
+    res.sendFile(faviconPath);
+  });
+
   // API prefix for all routes
   const apiPrefix = "/api";
 
