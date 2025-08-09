@@ -12,10 +12,10 @@ export default function TeamSection() {
       position: "TECHNICAL DIRECTOR"
     },
     {
-      name: "Michael Buventura",
+      name: "Michael Buenaventura",
       role: "Co-founder / Chief Technology Advocate",
       description: "With a two-decade career working for companies like Bank of America and American Express, Michael plays a crucial role in educating customers about enterprise-scale systems and technology trends.",
-      image: "https://api.dicebear.com/7.x/identicon/svg?seed=MichaelBuventura&backgroundColor=1D4ED8",
+      image: "https://api.dicebear.com/7.x/identicon/svg?seed=MichaelBuenaventura&backgroundColor=1D4ED8",
       badge: "PRINCIPAL TEAM",
       position: "STRATEGIST"
     },
